@@ -1,0 +1,177 @@
+.banner-container {
+    position: relative;
+    height: 480px;
+    max-width: 1500px;
+    background-image: linear-gradient(to bottom, rgba(157, 14, 14, 0), #4f0707), url("../Assets/home.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner-container .content {
+    padding-top: 80px;
+    z-index: 10;
+}
+
+.banner__logo {
+    width: 147px;
+    height: 147px;
+    background-color: #fff;
+    border-radius: 50%;
+    font-family: Poppins;
+    font-size: 70px;
+    font-weight: 600;
+    font-stretch: normal;
+    line-height: 1.51;
+    letter-spacing: normal;
+    font-style: normal;
+    color: #eb2929;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-container .heading {
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.53;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+.banner-container .search-options {
+    max-width: 750px;
+    margin: auto;
+}
+
+.search-options select {
+    height: 60px;
+    background-color: #fff;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.53;
+    letter-spacing: normal;
+    text-align: left;
+    color: #636f88;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+}
+
+.search-options select:focus {
+    border: none;
+    outline: none;
+}
+
+.search-options select option {
+    color: #636f88;
+}
+
+.searchbox-container {
+    position: relative;
+}
+
+.searchbox-container .restaurant-search {
+    height: 60px;
+    background-color: #fff;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.53;
+    letter-spacing: normal;
+    text-align: left;
+    color: #636f88;
+    border: none;
+    width: 100%;
+}
+
+.searchbox-container .restaurant-search:focus {
+    border: none;
+    outline: none;
+}
+
+.searchbox-container .search-icon {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 16px;
+}
+
+/* Suggestion box */
+
+.suggestion-box {
+    z-index: 20;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+}
+
+.suggestion-box .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid lightgray;
+}
+.item img {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.text-container .name {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #192f60;
+}
+
+.text-container .locality {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #636f88;
+}
+.item h4 {
+    align-self: center;
+    font-size: 16px;
+    font-family: Poppins;
+}
+
+.order-button {
+    padding: 0;
+    margin: 0;
+}
+
+/* Media */
+
+@media (max-width: 766px) {
+    .banner-container .content .heading {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 560px) {
+    .banner__logo {
+        width: 75px;
+        height: 75px;
+        font-size: 36px;
+    }
+}

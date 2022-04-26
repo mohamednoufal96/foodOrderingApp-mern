@@ -1,0 +1,80 @@
+import React, { Component } from "react";
+import axios from "axios";
+
+import QuickSearches from "./QuickSearches";
+import Wallpaper from "./Wallpaper";
+
+const API_URL = require("../constants").API_URL;
+
+export default class Home extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            locations: [],
+            mealTypes: [],
+        };
+    }
+
+    componentDidMount() {
+        // get all locations
+        const getAllLocations = async () => {
+            try {
+                const resp = await axios.get(`${API_URL}/getAllLocations`);
+                this.setState({
+                    locations: resp.data.locations,
+                });
+            } catch (err) {
+                console.log(error);
+            }
+        };
+        getAllLocations();
+
+        // get all mealtypes
+        const getAllMealTypes = async () => {
+            try {
+                const resp = await axios.get(`${API_URL}/getAllMealTypes`);
+                this.setState({
+                    mealTypes: resp.data.mealTypes,
+                });
+            } catch (err) {
+                console.log(error);
+            }
+        };
+        getAllMealTypes();
+
+        // //    Fetch all locations
+        // axios
+        //     .get(`${API_URL}/getAllLocations`)
+        //     .then((resp) => {
+        //         this.setState({
+        //             locations: resp.data.locations,
+        //         });
+        //     })
+        //     .catch((error) => {
+        //         console.log(error);
+        //     });
+
+        // to get all mealTypes
+        //     axios
+        //         .get(`${API_URL}/getAllMealTypes`)
+        //         .then((resp) => {
+        //             this.setState({
+        //                 mealTypes: resp.data.mealTypes,
+        //             });
+        //         })
+        //         .catch((error) => {
+        //             console.log(error);
+        //         });
+    }
+
+    render() {
+        const { locations, mealTypes } = this.state;
+        return (
+            <>
+                <Wallpaper locationData={locations} />
+                <QuickSearches mealTypesData={mealTypes} />
+            </>
+        );
+    }
+}
